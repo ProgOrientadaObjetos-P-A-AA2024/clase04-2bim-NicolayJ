@@ -28,7 +28,7 @@ public class Ejecutor {
         
         ArriendoLocalComida arriendoComida2 = new ArriendoLocalComida(
                 "Christian Cruz", 300, 10, 20.2, 40.2);
-        
+        listaArriendos.add(arriendoComida2);
         
         
         ArriendoLocalComercial arriendoComercial = new ArriendoLocalComercial(
@@ -45,6 +45,13 @@ public class Ejecutor {
         listaArriendos.add(arriendoSesiones);
         
         for (int i = 0; i < listaArriendos.size(); i++) {
+            /*
+            Aqui lo que se hace es buscar todos los objetos de listaArriendo 
+            que se hayan guardado en el ArrayList y sin importar sus diferencias
+            siempre y cuandos sean subclases de la clase Arriendo lo que se hace
+            es llamar al metodo abstracto que para cada subclase se adecua en 
+            base a su contexto particular
+            */
             listaArriendos.get(i).establecerArriendoMensual(); // se llama al 
                                                             // métodos abstracto
             System.out.println(listaArriendos.get(i));
